@@ -1,13 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Suspense }          from 'react';
+import ReactDOM                     from 'react-dom';
+import App                          from './App';
+import * as serviceWorker           from './serviceWorker';
+import { HelmetProvider }           from 'react-helmet-async';
+import LoadingOverlay               from './components/partials/LoadingOverlay';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HelmetProvider>
+    <Suspense fallback={ <LoadingOverlay /> }>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Suspense>
+  </HelmetProvider>,
   document.getElementById('root')
 );
 

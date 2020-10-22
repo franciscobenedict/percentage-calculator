@@ -1,0 +1,55 @@
+// .card_holder {
+//   border: 1px solid $medium_grey;
+//   border-radius: 10px;
+//   padding: 20px 0;
+//   margin: 20px 0;
+//   position: relative;
+//
+//   h3.card_heading, .btn_card {
+//     margin: 0 20px;
+//   }
+//
+//   .card_divider {
+//     border-color: $medium_grey;
+//   }
+//
+//   .task_items {
+//     .task_item {
+//       .card {
+//         margin: 20px;
+//         &.completed {
+//           background: $pale-green;
+//           position: relative;
+//           &:after {
+//             color: $green;
+//             content: '\2713';
+//             height: 20px;
+//             position: absolute;
+//             right: 0;
+//             width: 20px;
+//           }
+//         }
+//       }
+//       .nothing_card {
+//         margin: 20px;
+//       }
+//     }
+//   }
+//
+//   .btn_card {
+//     display: flex;
+//     align-items: center;
+//     justify-content: right;
+//     width: auto;
+//   }
+// }
+//
+// .card {
+//   .btn_card_task {
+//     .done_btn, .remove_btn {
+//       .btn {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

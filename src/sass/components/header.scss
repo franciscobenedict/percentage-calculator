@@ -1,0 +1,37 @@
+@import '_mediaqueries';
+header {
+  background: rgba(51,51,51,0.6);
+  display: flex; flex-direction: row;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  
+  @include respond-below(strangeWidth) { background: rgba(51,51,51,0.8); }
+
+  .fbLogo {
+    height: 90px;
+    width: 100px;
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100px;
+    }
+  }
+
+  .links_holder {
+    margin-left: 20px;
+    a {
+      color: #ffffff;
+      // display: inline-block;
+      margin-right: 10px;
+      padding: 5px 10px;
+      height: 90px;
+      svg {
+        width: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
