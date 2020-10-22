@@ -75,7 +75,8 @@ html {
       h3,
       h4,
       h5,
-      p { color: $dark_grey; }
+      p,
+      ul li { color: $dark_grey; }
 
       @include respond-below(md) {
         // HEADINGS

@@ -35,6 +35,8 @@ const Footer = () => {
           }
           </>
         }
+        <br />
+        Image credit: Photo by Asael Peña from unsplash.com
       </div>
     </footer>
   );

@@ -19,10 +19,10 @@ const PercentageCalculatorView = () => {
   const [superDangerZone, setSuperDangerZone] =   useState(false);
   const [safeAmount, setSafeAmount] =             useState();
   const isInvalid = creditLimit === '' || amountSpent === '';
+  const [toggleTechUsed, setToggleTechUsed] = useState(false);
 
-  useEffect(() => {
-    setPageTitle('Online percentage calculator');
-  }, [pageTitle]);
+  // useEffect(() => {
+  // }, []);
 
   const handleCalculateChange = e => {
     e.preventDefault();
@@ -37,6 +37,7 @@ const PercentageCalculatorView = () => {
   }
 
   useEffect(() => {
+    setPageTitle('Online percentage calculator');
     result < 14.99 ? setSafeZone(true) : setSafeZone(false);
     result > 15 && result < 24.99 ? setAmberZone(true) : setAmberZone(false);
     result >= 25 && result < 99.99 ? setDangerZone(true) : setDangerZone(false);
@@ -45,7 +46,7 @@ const PercentageCalculatorView = () => {
     setAmountSpent('');
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [result, safeZone], amberZone, dangerZone);
+  }, [pageTitle, result, safeZone, amberZone, dangerZone]);
 
   return (
     <Layout title={pageTitle} description="This is the percentage calculator page">
@@ -53,6 +54,22 @@ const PercentageCalculatorView = () => {
         <section className="section white">
           <h1>{pageTitle}</h1>
           <p>This tool helps the user to calculate the amount of percentage used from a credit limit or a ceiling amount specified.</p>
+
+          <div className="profile_buttons_container">
+            <button className="button submit_btn form_button" onClick={() => setToggleTechUsed(!toggleTechUsed)}>Technology used</button>
+          </div>
+
+          {
+            toggleTechUsed &&
+            <ul>
+              <li>react</li>
+              <li>react-hooks</li>
+              <li>javascript</li>
+              <li>scss</li>
+              <li>css3</li>
+              <li>html5</li>
+            </ul>
+          }
         </section>
 
         <SectionDivider />
